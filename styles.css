@@ -1,0 +1,264 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #000; /* Black text */
+    background-color: #1e1e1e; /* Dark background */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Make body at least full viewport height */
+    position: relative; /* Position context for background */
+}
+
+.container {
+    flex: 1; /* Allow the main content to grow and fill space */
+    position: relative; /* Position context for child elements */
+}
+
+/* Background Image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.avif'); /* Your background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Place behind other content */
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(44, 44, 44, 0.7); /* Semi-transparent header background */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; /* Black text */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #000; /* Black text for links */
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    color: #000; /* Black text for the hero section */
+    padding: 80px 30px;
+    text-align: center;
+}
+
+/* Hero Text Styling */
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffffff; /* Hacker green button */
+    color: #000; /* Black text for button */
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000; /* Black text */
+}
+
+.feature-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: rgba(0, 255, 0, 0.1); /* Transparent hacker green */
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    transition: transform 0.3s ease;
+    color: #000; /* Black text */
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+/* About Section */
+.about {
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #000; /* Black text */
+}
+
+.about h2, .about h3 {
+    color: #000; /* Black text */
+}
+
+.about p, .about ul {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000; /* Black text */
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 30px;
+    text-align: center; /* Center text */
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000; /* Black text */
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white */
+    padding: 30px;
+    border-radius: 10px;
+}
+.contact-button {
+    background-color: #000000; /* Hacker green button */
+    color: #ffffff; /* Dark text for button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #b20000; /* Lighter green on hover */
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000; /* Hacker green border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+    color: #fff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(44, 44, 44, 0.7);
+    color: #000; /* Black text */
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+/* Marketplace Feature Items */
+/* Center the product listing */
+.feature-list {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 50px; /* Add space between the two products */
+    margin: 50px auto; /* Center the listing vertically on the page */
+}
+
+/* Adjust the feature-item size for two products */
+.feature-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque background */
+    color: #000; /* Black text */
+    padding: 40px; /* Increased padding */
+    border-radius: 12px;
+    width: 400px; /* Larger width for product */
+    height: auto; /* Automatically adjust height */
+    text-align: center; /* Center content inside the bubble */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for the product image */
+.product-image {
+    max-width: 100%; /* Make the image responsive */
+    max-height: 200px; /* Limit height to fit nicely */
+    margin-bottom: 20px; /* Add space below the image */
+    border-radius: 8px; /* Add rounded corners to images */
+}
+
+/* Hover effect for feature items */
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for hover effect */
+}
+
+/* CTA button styling */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000; /* Black button */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555; /* Darker button on hover */
+}
